@@ -23,7 +23,7 @@
           "items": { "type": "string" },
           "minItems": 1,
           "maxItems": 4,
-          "description": "Array of 4 player names, starting with Player 0 and proceeding clockwise."
+          "description": "Array of 1 to 4 player names, starting with Player 0 and proceeding clockwise."
         },
         "initialScore": {
           "type": "array",

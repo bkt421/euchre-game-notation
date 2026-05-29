@@ -1,6 +1,6 @@
-# Deterministic Rules of Euchre Game Notation (EGN)
+# Determinism of Euchre Game Notation (EGN)
 
-Euchre Game Notation (EGN) relies on the philosophy of **Deterministic Minimalism**. This means that an `.egn` file only stores the raw, unpredictable actions of a game (the deal, the bids, the cards played). All other game states—such as who won a trick, whose turn it is, and the current score—must be calculated by the parsing engine using standard Euchre rules.
+Euchre Game Notation (EGN) relies on the philosophy of **Deterministic Minimalism**. This means that an `.egn` file only stores the raw, unpredictable actions of a game (the rules, the initial score, the deal, the bids, the cards played, etc.). All other game states, such as who won a trick, whose turn it is, and the current score, must be calculated by the parsing engine using the indicated ruleset.
 
 This document outlines the standard deterministic rules a parser must apply when reading an `.egn` file.
 
