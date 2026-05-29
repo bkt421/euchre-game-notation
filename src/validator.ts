@@ -1,8 +1,10 @@
 import Ajv, { ErrorObject } from "ajv";
+import addFormats from "ajv-formats";
 import egnSchema from "../schemas/egn-schema-v1.json";
 import { EGNFile } from "./types";
 
 const ajv = new Ajv();
+addFormats(ajv);
 const validate = ajv.compile(egnSchema);
 
 export interface ValidationResult {
