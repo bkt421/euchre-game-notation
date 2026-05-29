@@ -141,7 +141,7 @@ In EGN, cards are primarily represented by a two-character string indicating the
 * **`N`**: Can be used as an alternative notation for the 9 rank (e.g., `"Nc"` for the 9 of Clubs).
 * **`R` and `L`**: Can be used to explicitly denote the Right and Left Bowers. It is important to note that the Left Bower (`"L"`) always represents the Jack of the same color as the called trump suit.
 * **`Xx`**: Used to denote an unknown rank or suit (e.g., `"Xc"` for an unknown Club, `"Jx"` for an unknown Jack, or `"Xx"` for a completely unknown card). This is especially useful for incomplete match logs or hidden cards.
-* **`tngh`**: Used to denote generic trump (`"t"`), next (`"n"`), green suit 1 (`"g"`) and green suit 2 (`"h"`) for when the actul suit doesn't matter to your scenario
+* **`tngh`**: Used to denote generic trump (`"t"`), next (`"n"`), green suit 1 (`"g"`) and green suit 2 (`"h"`) for when the actual suit doesn't matter to your scenario
 * **`B` (Joker/Benny)**: In rulesets that include a Joker (the "Best Bower" or "Benny"), `"B"` represents the Joker.
 
 ---

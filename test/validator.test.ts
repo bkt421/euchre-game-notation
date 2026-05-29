@@ -63,6 +63,39 @@ describe("EGN Validator", () => {
     expect(result.errors).toBeFalsy();
   });
 
+  it("should successfully validate alternate rules and card exchanges", () => {
+    const alternateData = {
+      "fileType": "Euchre Game Notation",
+      "version": "1.0.0",
+      "metadata": {
+        "players": ["Player0", "Player1", "Player2", "Player3"],
+        "initialScore": [0, 0]
+      },
+      "deals": [
+        {
+          "dealNumber": 0,
+          "initialState": {
+            "dealer": 1,
+            "upCard": "B" // The Joker
+          },
+          "phases": [
+            {
+              "phaseNumber": 0,
+              "type": "EUCHRE_BIDDING",
+              "calls": ["Pass", "Pass", "Pass", "x"], // Unknown call
+              "isAlone": false,
+              "card_exchanges": [
+                { "sender": 2, "receiver": 1, "cards": ["9s", "9c", "Ts"] }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+    const result = validateEGN(alternateData);
+    expect(result.isValid).toBe(true);
+  });
+
   it("should reject an invalid EGN file", () => {
     const invalidData = {
       fileType: "Not Euchre",

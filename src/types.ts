@@ -36,17 +36,19 @@ export interface InitialState {
   player_cards?: Card[][];
 }
 
+export interface CardExchange {
+  sender: number;
+  receiver: number;
+  cards: Card[];
+}
+
 export interface BiddingPhase {
   phaseNumber: number;
   type: "EUCHRE_BIDDING";
   calls: Call[];
   isAlone: boolean;
   discard?: Card;
-  card_exchange?: {
-    sender: number;
-    receiver: number;
-    cards: Card[];
-  };
+  card_exchanges?: CardExchange[];
 }
 
 export interface TrickPlayPhase {

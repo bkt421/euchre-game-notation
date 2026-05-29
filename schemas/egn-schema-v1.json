@@ -21,7 +21,7 @@
         "players": {
           "type": "array",
           "items": { "type": "string" },
-          "minItems": 4,
+          "minItems": 1,
           "maxItems": 4,
           "description": "Array of 4 player names, starting with Player 0 and proceeding clockwise."
         },
@@ -117,14 +117,17 @@
         },
         "isAlone": { "type": "boolean" },
         "discard": { "$ref": "#/definitions/card" },
-        "card_exchange": {
-          "type": "object",
-          "properties": {
-            "sender": { "type": "integer", "minimum": 0, "maximum": 3 },
-            "receiver": { "type": "integer", "minimum": 0, "maximum": 3 },
-            "cards": { "$ref": "#/definitions/card_list" }
-          },
-          "required": ["sender", "receiver", "cards"]
+        "card_exchanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sender": { "type": "integer", "minimum": 0, "maximum": 3 },
+              "receiver": { "type": "integer", "minimum": 0, "maximum": 3 },
+              "cards": { "$ref": "#/definitions/card_list" }
+            },
+            "required": ["sender", "receiver", "cards"]
+          }
         }
       }
     },
