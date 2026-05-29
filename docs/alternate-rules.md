@@ -14,7 +14,7 @@ Standardizes the baseline rules of the game. When `true`, it commonly enforces *
 **Default:** `9`
 Defines the lowest card rank in the deck. While standard Euchre uses a 24-card deck (9s and up), some variations use a 32-card deck extending down to 7s (`min_rank: 7`).
 
-## `winning_total` (integer)
+## `winning_score` (integer)
 **Default:** `10`
 Indicates the target score to win the game. If a team ends a hand with more than this many points, they win the game.
 

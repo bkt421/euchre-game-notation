@@ -10,6 +10,7 @@ export type Call = "Pass" | "Order" | "s" | "h" | "d" | "c" | "n" | "x";
 export interface Ruleset {
   std?: boolean;
   min_rank?: number;
+  winning_score?: number;
   canadian?: boolean;
   loner_lead?: "LEFT_OF_DEALER" | "LEFT_OF_LONER";
   farmers?: boolean;
@@ -17,6 +18,8 @@ export interface Ruleset {
   go_under?: boolean;
   joker?: boolean;
   allow_no_trump?: boolean;
+  fast_break?: boolean;
+  four_trick_tokens?: boolean;
 }
 
 export interface Metadata {
@@ -37,7 +40,7 @@ export interface InitialState {
 }
 
 export interface CardExchange {
-  sender: number;
+  sender?: number;
   receiver: number;
   cards: Card[];
 }
