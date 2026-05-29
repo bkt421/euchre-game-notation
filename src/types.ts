@@ -45,6 +45,14 @@ export interface CardExchange {
   cards: Card[];
 }
 
+export interface Annotations {
+  "1"?: string;
+  "2"?: string;
+  "3"?: string;
+  "4"?: string;
+  "5"?: string;
+}
+
 export interface BiddingPhase {
   phaseNumber: number;
   type: "EUCHRE_BIDDING";
@@ -52,6 +60,7 @@ export interface BiddingPhase {
   isAlone: boolean;
   discard?: Card;
   card_exchanges?: CardExchange[];
+  calls_annotations?: Annotations;
 }
 
 export interface TrickPlayPhase {
@@ -59,6 +68,7 @@ export interface TrickPlayPhase {
   type: "TRICK_PLAY";
   initialLead?: number;
   tricks: Card[][];
+  tricks_annotations?: Annotations;
 }
 
 export type Phase = BiddingPhase | TrickPlayPhase;
