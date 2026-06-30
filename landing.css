@@ -62,13 +62,17 @@ body {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -294,9 +298,17 @@ h1, h2, h3, h4 {
   display: inline-block;
 }
 
-.dot.red { background-color: #ef4444; }
-.dot.yellow { background-color: #f59e0b; }
-.dot.green { background-color: #10b981; }
+.dot.red {
+  background-color: #ef4444;
+}
+
+.dot.yellow {
+  background-color: #f59e0b;
+}
+
+.dot.green {
+  background-color: #10b981;
+}
 
 .card-title {
   color: var(--text-muted);
@@ -317,10 +329,21 @@ h1, h2, h3, h4 {
 }
 
 /* JSON Code Highlighting */
-.json-key { color: #f43f5e; }
-.json-string { color: var(--accent-green); }
-.json-number { color: var(--accent-blue); }
-.json-literal { color: var(--accent-purple); }
+.json-key {
+  color: #f43f5e;
+}
+
+.json-string {
+  color: var(--accent-green);
+}
+
+.json-number {
+  color: var(--accent-blue);
+}
+
+.json-literal {
+  color: var(--accent-purple);
+}
 
 /* Section Structuring */
 .section-padding {
@@ -905,7 +928,9 @@ td code {
     align-items: center;
   }
 
-  .doc-card, .rules-box, .cli-box {
+  .doc-card,
+  .rules-box,
+  .cli-box {
     padding: 24px 16px;
   }
 
@@ -913,8 +938,8 @@ td code {
     font-size: 0.8rem;
   }
 
-  td, th {
+  td,
+  th {
     padding: 10px 8px;
   }
 }
-
